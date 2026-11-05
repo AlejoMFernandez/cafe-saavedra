@@ -1,6 +1,6 @@
 // SAAVEDRA CAFÉ · demo — intro del sello, carta corta, estante de bolsas, la receta (balanza), mazo de fotos.
-import { initKit } from '../kit/kit.js?v=1';
-import { esc } from '../kit/core/util.js?v=1';
+import { initKit } from '../kit/kit.js?v=2';
+import { esc } from '../kit/core/util.js?v=2';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));

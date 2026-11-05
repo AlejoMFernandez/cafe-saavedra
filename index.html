@@ -28,8 +28,8 @@
 <link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="img/f/packaging.webp" fetchpriority="high">
 <link rel="stylesheet" href="css/fuentes.css?v=1" data-kit-fonts>
-<link rel="stylesheet" href="kit/kit.css?v=1">
-<link rel="stylesheet" href="css/saavedra.css?v=1">
+<link rel="stylesheet" href="kit/kit.css?v=2">
+<link rel="stylesheet" href="css/saavedra.css?v=2">
 </head>
 <body>
 
@@ -121,8 +121,8 @@
         <div class="carta__main" data-r>
           <div data-kit="carta" id="carta-principal" data-kit-categorias="cafe,frio,paste,salado" class="carta__kit"></div>
           <div class="carta__nav">
-            <button type="button" class="btn btn--linea btn--chico" data-mover="-1">← <span data-prev>Anterior</span></button>
-            <button type="button" class="btn btn--tinta btn--chico" data-mover="1"><span data-next>Siguiente</span> →</button>
+            <button type="button" class="carta__ir" data-mover="-1"><i aria-hidden="true">←</i> <small>Anterior</small> <span data-prev>Anterior</span></button>
+            <button type="button" class="carta__ir" data-mover="1"><small>Seguí con</small> <span data-next>Siguiente</span> <i aria-hidden="true">→</i></button>
           </div>
         </div>
         <aside class="carta__aside" aria-hidden="true">
@@ -287,6 +287,6 @@
   </figure>
 </div>
 
-<script type="module" src="js/saavedra.js?v=1"></script>
+<script type="module" src="js/saavedra.js?v=2"></script>
 </body>
 </html>

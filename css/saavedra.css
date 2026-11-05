@@ -251,12 +251,15 @@ html.js .t2[data-r].visto .pt, html.js [data-r].visto .t2 .pt { animation: punto
 .it__precio { font: 500 13px/1 var(--f-mono); color: var(--c-sub); white-space: nowrap; }
 .kit-tag--txt { display: inline-block; margin-left: 6px; padding: 3px 7px; border-radius: 6px; font: 500 11px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; vertical-align: 2px; background: var(--hoja); color: var(--taza); }
 .kit-tag--sintacc { background: var(--barra); }
-.carta .kit-add, .cajas__kit .kit-add, .bolsa .kit-add { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--c-txt, var(--tinta)); background: var(--c-txt, var(--tinta)); color: var(--c-fondo, var(--papel)); font: 600 15px/1 var(--f-txt); touch-action: manipulation; }
+.carta .kit-add, .cajas__kit .kit-add, .bolsa .kit-add { border: 1.5px solid var(--c-txt, var(--tinta)); background: transparent; color: var(--c-txt, var(--tinta)); }
+@media (hover: hover) { .carta .kit-add:hover, .cajas__kit .kit-add:hover, .bolsa .kit-add:hover { background: var(--c-txt, var(--tinta)); color: var(--c-fondo, var(--papel)); } }
 .carta .kit-step { background: var(--c-txt); color: var(--c-fondo); border-color: var(--c-txt); }
-.carta .kit-step button, .bolsa .kit-step button, .cajas__kit .kit-step button { width: 44px; height: 44px; }
-.carta__nav { display: flex; justify-content: space-between; gap: 12px; padding-top: 26px; }
-.carta__nav .btn { max-width: 48%; }
-.carta__nav .btn span { overflow: hidden; text-overflow: ellipsis; }
+.carta__nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 22px; }
+.carta__ir { appearance: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--c-txt); font: 900 18px/1 var(--f-tit); text-transform: uppercase; letter-spacing: .02em; cursor: pointer; touch-action: manipulation; }
+.carta__ir small { white-space: nowrap; font: 400 12px/1 var(--f-mono); text-transform: none; letter-spacing: .04em; color: var(--c-sub); }
+.carta__ir i { font-style: normal; font-family: var(--f-txt); transition: transform .25s var(--ease); }
+.carta__ir span { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; text-decoration-color: transparent; transition: text-decoration-color .2s; }
+@media (hover: hover) { .carta__ir:hover span { text-decoration-color: currentColor; } .carta__ir[data-mover="1"]:hover i { transform: translateX(4px); } .carta__ir[data-mover="-1"]:hover i { transform: translateX(-4px); } }
 .carta .btn--linea { color: var(--c-txt); border-color: var(--c-txt); }
 .carta .btn--tinta { background: var(--c-txt); color: var(--c-fondo); border-color: var(--c-txt); }
 @media (min-width: 1024px) {
