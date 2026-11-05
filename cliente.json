@@ -1,0 +1,728 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "cafe-saavedra",
+ "nombre": "Saavedra Café",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "demoVersion": 1,
+ "whatsapp": "",
+ "instagram": "cafe.saavedra",
+ "prefijoPedido": "SC",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo-negro.svg",
+  "logoPanel": "img/logo-crema.svg",
+  "logoClaro": "img/logo-crema.svg",
+  "favicon": "img/favicon.png",
+  "colores": {
+   "fondo": "#E3E2D4",
+   "superficie": "#F7F5EF",
+   "texto": "#14100E",
+   "primario": "#14100E",
+   "acento": "#B48A5E",
+   "borde": "#C7C4B4"
+  },
+  "fuentes": {
+   "titulos": "'Fraunces', Georgia, serif",
+   "texto": "'Instrument Sans', system-ui, sans-serif",
+   "googleFonts": "Fraunces:opsz,wght@9..144,700;9..144,900&family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500"
+  },
+  "estilo": {
+   "forma": "pildora",
+   "radio": "18px",
+   "sombra": "suave",
+   "borde": "1.5px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": false,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "mar": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "mie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "jue": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "vie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "sab": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ],
+  "dom": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ]
+ },
+ "pedidos": {
+  "salidas": [
+   "efectivo",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "aviso": "panel",
+  "sinPrecio": "a_confirmar",
+  "retiroHoy": {
+   "cadaMin": 15,
+   "prepMin": 10,
+   "asap": true
+  },
+  "encargo": {
+   "anticipacionHoras": 24,
+   "diasAdelante": 14,
+   "franjas": [
+    {
+     "id": "manana",
+     "nombre": "Mañana",
+     "desde": "09:00",
+     "hasta": "13:00"
+    },
+    {
+     "id": "tarde",
+     "nombre": "Tarde",
+     "desde": "15:00",
+     "hasta": "20:00"
+    }
+   ]
+  }
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "destacados": [
+  {
+   "id": "semana",
+   "nombre": "Filtrado de la semana",
+   "ayuda": "El grano que está esta semana en el V60. Se ve en el estante de bolsas y en la receta.",
+   "campos": [
+    {
+     "id": "origen",
+     "label": "Origen"
+    },
+    {
+     "id": "tostador",
+     "label": "Tostador"
+    },
+    {
+     "id": "proceso",
+     "label": "Proceso y variedad"
+    },
+    {
+     "id": "notas",
+     "label": "Notas de sabor",
+     "largo": true
+    }
+   ],
+   "valores": {
+    "origen": "Colombia",
+    "tostador": "Puerto Blest",
+    "proceso": "",
+    "notas": ""
+   }
+  }
+ ],
+ "carta": {
+  "categorias": [
+   {
+    "id": "cafe",
+    "nombre": "Cafe."
+   },
+   {
+    "id": "frio",
+    "nombre": "Frio."
+   },
+   {
+    "id": "paste",
+    "nombre": "Paste."
+   },
+   {
+    "id": "salado",
+    "nombre": "Salado."
+   },
+   {
+    "id": "granos",
+    "nombre": "Granos."
+   },
+   {
+    "id": "cajas",
+    "nombre": "Para regalar",
+    "anticipacionHoras": 24
+   }
+  ],
+  "productos": [
+   {
+    "id": "espresso",
+    "categoria": "cafe",
+    "nombre": "Espresso",
+    "descripcion": "Corto y concentrado.",
+    "precio": null,
+    "foto": "img/f/espresso.webp"
+   },
+   {
+    "id": "doble-espresso",
+    "categoria": "cafe",
+    "nombre": "Doble espresso",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "macchiato",
+    "categoria": "cafe",
+    "nombre": "Macchiato",
+    "descripcion": "Espresso con una mancha de espuma.",
+    "precio": null,
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "capuchino",
+    "categoria": "cafe",
+    "nombre": "Capuchino",
+    "descripcion": "",
+    "precio": null,
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "americano",
+    "categoria": "cafe",
+    "nombre": "Americano",
+    "descripcion": "Simple o doble.",
+    "precio": null,
+    "foto": "img/f/americano.webp",
+    "variantes": [
+     {
+      "id": "simple",
+      "nombre": "Simple",
+      "precio": null
+     },
+     {
+      "id": "doble",
+      "nombre": "Doble",
+      "precio": null
+     }
+    ]
+   },
+   {
+    "id": "flat-white",
+    "categoria": "cafe",
+    "nombre": "Flat white",
+    "descripcion": "Doble espresso y leche texturada.",
+    "precio": null,
+    "foto": "img/f/flat.webp",
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "latte",
+    "categoria": "cafe",
+    "nombre": "Latte",
+    "descripcion": "Simple o doble.",
+    "precio": null,
+    "foto": "img/f/latte.webp",
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ],
+    "variantes": [
+     {
+      "id": "simple",
+      "nombre": "Simple",
+      "precio": null
+     },
+     {
+      "id": "doble",
+      "nombre": "Doble",
+      "precio": null
+     }
+    ]
+   },
+   {
+    "id": "mocachino",
+    "categoria": "cafe",
+    "nombre": "Mocachino",
+    "descripcion": "",
+    "precio": null,
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "espresso-del-dia",
+    "categoria": "cafe",
+    "nombre": "Espresso del día",
+    "descripcion": "El grano que está hoy en la barra.",
+    "precio": null
+   },
+   {
+    "id": "filtrado-v60",
+    "categoria": "cafe",
+    "nombre": "Filtrado V60",
+    "descripcion": "El filtrado de la semana.",
+    "precio": null,
+    "foto": "img/f/filtrado.webp"
+   },
+   {
+    "id": "te",
+    "categoria": "cafe",
+    "nombre": "Té / té con leche",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "ice-coffee",
+    "categoria": "frio",
+    "nombre": "Ice coffee",
+    "descripcion": "",
+    "precio": null,
+    "foto": "img/f/frio.webp"
+   },
+   {
+    "id": "ice-latte",
+    "categoria": "frio",
+    "nombre": "Ice latte",
+    "descripcion": "",
+    "precio": null,
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ice-flat",
+    "categoria": "frio",
+    "nombre": "Ice flat",
+    "descripcion": "",
+    "precio": null,
+    "opciones": [
+     {
+      "id": "leche",
+      "nombre": "Leche",
+      "valores": [
+       {
+        "id": "entera",
+        "nombre": "Leche entera"
+       },
+       {
+        "id": "almendras",
+        "nombre": "De almendras"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cold-brew",
+    "categoria": "frio",
+    "nombre": "Cold brew",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "espresso-tonic",
+    "categoria": "frio",
+    "nombre": "Espresso tonic",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "licuados",
+    "categoria": "frio",
+    "nombre": "Licuados",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "jugo-naranja",
+    "categoria": "frio",
+    "nombre": "Jugo de naranja",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "kombucha",
+    "categoria": "frio",
+    "nombre": "Kombucha",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "agua-del-dia",
+    "categoria": "frio",
+    "nombre": "Agua del día",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "scon",
+    "categoria": "paste",
+    "nombre": "Scon",
+    "descripcion": "",
+    "precio": null,
+    "foto": "img/f/latte-scon.webp"
+   },
+   {
+    "id": "coquitos",
+    "categoria": "paste",
+    "nombre": "Coquitos",
+    "descripcion": "",
+    "precio": null,
+    "foto": "img/f/coquitos.webp"
+   },
+   {
+    "id": "alfajor-almendras",
+    "categoria": "paste",
+    "nombre": "Alfajor de almendras",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "alfajor-nuez",
+    "categoria": "paste",
+    "nombre": "Alfajor de nuez",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "alfajor-banado",
+    "categoria": "paste",
+    "nombre": "Alfajor bañado",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "alfajor-rogel",
+    "categoria": "paste",
+    "nombre": "Alfajor rogel",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "cookie-chica",
+    "categoria": "paste",
+    "nombre": "Cookie chica",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "cookie-especial",
+    "categoria": "paste",
+    "nombre": "Cookie especial",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "croissant",
+    "categoria": "paste",
+    "nombre": "Croissant",
+    "descripcion": "",
+    "precio": null,
+    "foto": "img/f/portafiltro.webp"
+   },
+   {
+    "id": "croissant-jyq",
+    "categoria": "paste",
+    "nombre": "Croissant de jamón y queso",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "roll-canela",
+    "categoria": "paste",
+    "nombre": "Roll de canela",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "pan-chocolate",
+    "categoria": "paste",
+    "nombre": "Pan de chocolate",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "tostadas",
+    "categoria": "paste",
+    "nombre": "Tostadas con queso y mermelada",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "budin",
+    "categoria": "paste",
+    "nombre": "Porción de budín",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "trufa",
+    "categoria": "paste",
+    "nombre": "Trufa",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "vegan"
+    ]
+   },
+   {
+    "id": "cookies-vegan",
+    "categoria": "paste",
+    "nombre": "Cookies",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "vegan"
+    ]
+   },
+   {
+    "id": "budin-banana",
+    "categoria": "paste",
+    "nombre": "Budín de banana",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "vegan"
+    ]
+   },
+   {
+    "id": "pan-queso",
+    "categoria": "paste",
+    "nombre": "Pan de queso",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "sintacc"
+    ]
+   },
+   {
+    "id": "marquise",
+    "categoria": "paste",
+    "nombre": "Marquise",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "sintacc"
+    ]
+   },
+   {
+    "id": "alfajor-mani",
+    "categoria": "paste",
+    "nombre": "Alfajor de maní",
+    "descripcion": "",
+    "precio": null,
+    "etiquetas": [
+     "sintacc"
+    ]
+   },
+   {
+    "id": "yogur-granola",
+    "categoria": "salado",
+    "nombre": "Yogur con granola",
+    "descripcion": "",
+    "precio": null
+   },
+   {
+    "id": "tostado",
+    "categoria": "salado",
+    "nombre": "Tostado",
+    "descripcion": "Jamón y queso o caprese.",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "jyq",
+      "nombre": "Jamón y queso",
+      "precio": null
+     },
+     {
+      "id": "caprese",
+      "nombre": "Caprese",
+      "precio": null
+     }
+    ]
+   },
+   {
+    "id": "fosforito",
+    "categoria": "salado",
+    "nombre": "Fosforito",
+    "descripcion": "Jamón y queso o caprese.",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "jyq",
+      "nombre": "Jamón y queso",
+      "precio": null
+     },
+     {
+      "id": "caprese",
+      "nombre": "Caprese",
+      "precio": null
+     }
+    ]
+   },
+   {
+    "id": "avocado-toast",
+    "categoria": "salado",
+    "nombre": "Avocado toast",
+    "descripcion": "Queso crema, palta, cherrys y semillas. Opción vegan y sin gluten.",
+    "precio": null
+   },
+   {
+    "id": "grano-semana",
+    "categoria": "granos",
+    "nombre": "Filtrado de la semana",
+    "descripcion": "Notas, proceso y altura: [A COMPLETAR desde el panel].",
+    "precio": null,
+    "foto": "img/f/granos.webp"
+   },
+   {
+    "id": "grano-espresso",
+    "categoria": "granos",
+    "nombre": "Espresso del día",
+    "descripcion": "El grano de la barra, para tu casa. [A COMPLETAR desde el panel].",
+    "precio": null
+   },
+   {
+    "id": "cajita",
+    "categoria": "cajas",
+    "nombre": "Cajita de pastelería",
+    "descripcion": "Scon, alfajores, cookies y lo que haya ese día, armada para regalar.",
+    "precio": null,
+    "foto": "img/f/caja.webp"
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu bolsita",
+  "verPedido": "Tu bolsita",
+  "agregar": "Sumar",
+  "aConfirmar": "Consultar",
+  "masAConfirmar": "+ consultar",
+  "precioAConfirmar": "precio a consultar",
+  "avisoSinPrecio": "Los precios se confirman en el local cuando pasás a retirar.",
+  "carritoVacio": "Tu bolsita está vacía.",
+  "carritoVacioSub": "Sumá algo de la carta y aparece acá.",
+  "enviarPedido": "Pedir para retirar",
+  "porEfectivo": "Pago en el local",
+  "porEfectivoSubSin": "Pagás cuando lo retirás",
+  "pedidoListo": "¡Listo! Te esperamos en Amenábar 3668."
+ }
+}
